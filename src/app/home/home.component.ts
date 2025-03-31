@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  targetDate: Date = new Date('2024-07-06T08:00:00');
+  targetDate: Date = new Date('2025-07-05T08:00:00');
   remainingTime: string;
 
   constructor() { 
