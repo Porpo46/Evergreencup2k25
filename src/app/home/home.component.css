@@ -105,7 +105,104 @@
   margin-left: 20px;
 }
 
+.countdown-item {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.video-promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.phone-frame {
+  position: relative;
+  padding: 10px 6px;
+  background-color: #111;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 2px solid #333;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background: #333;
+  border-radius: 3px;
+}
+
+.phone-frame video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 🔘 Pulsante Play centrale animato */
+.play-button {
+  position: absolute;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button::before {
+  content: '';
+  display: block;
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #8340B2;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+}
+
 @media (max-width: 950px) {
+  .phone-frame {
+    width: 200px;
+    height: 360px;
+    border-radius: 25px;
+    padding: 8px 5px;
+  }
+
+  .phone-frame::before {
+    width: 40px;
+    height: 4px;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-button::before {
+    border-width: 10px 0 10px 16px;
+  }
+
   .title {
     left: 20px;
     top: 50px;
@@ -174,5 +271,8 @@
 
   .luogo img {
     margin-top: 0px;
+  }
+  .video-instagram {
+    height: 360px;
   }
 }
