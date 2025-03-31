@@ -1,0 +1,39 @@
+<!-- app.component.html -->
+<div class="home-container">
+  <img src="assets/images/title.webp" alt="Title Evergreen" class="title">
+  <img src="assets/images/sfondo_home.webp" alt="Sfondo home" class="sfondo-home">
+</div>
+
+<div class="tempo">Mancano ancora ...</div>
+<div class="countdown">
+  <h5>Giorni</h5> <!-- Intestazione di livello inferiore -->
+  <span class="countdown-block">{{ remainingTime.split(':')[0] }}</span> <!-- Giorni -->
+  <h5>Ore</h5> <!-- Intestazione di livello inferiore -->
+  <span class="countdown-block">{{ remainingTime.split(':')[1] }}</span> <!-- Ore -->
+  <h5>Minuti</h5> <!-- Intestazione di livello inferiore -->
+  <span class="countdown-block">{{ remainingTime.split(':')[2] }}</span> <!-- Minuti -->
+  <h5>Secondi</h5> <!-- Intestazione di livello inferiore -->
+  <span class="countdown-block">{{ remainingTime.split(':')[3] }}</span> <!-- Secondi -->
+</div>
+
+<div class="edizione">
+  <h4>Cari nuovi amici di EverGreenCup, siamo pronti a scaldare i motori per la nostra prima edizione!<br> Se amate lo sport, il divertimento e volete vivere un pizzico di competizione, questo è l'evento che fa per voi!<br>
+    Preparatevi a scendere in campo per un weekend adrenalinico giocato fino all'ultimo pallone
+  </h4>
+</div>
+
+<div class="locinfo">
+  <div class="location-conteiner">
+    <h3 class="location">LOCATION</h3>
+    <iframe title="Mappa della Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1394.779232866106!2d11.830944915067406!3d45.63960556909604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778d5d2081d96c7%3A0xec0239f404516a27!2sEverGreenCup!5e0!3m2!1sit!2sit!4v1716840559927!5m2!1sit!2sit" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="indirizzo">
+      <h5>Impianto Sportivo di Tombolo<br>Via Sant'Andrea 6<br>Tombolo (PD), 35019</h5>
+    </div>
+  </div>
+
+  <div class="info-conteiner">
+    <div class="luogo">
+      <img src="assets/images/luogo.webp" alt="Luogo" class="sfondo-home">
+    </div>
+  </div>
+</div>

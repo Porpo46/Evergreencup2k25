@@ -1,0 +1,127 @@
+.moduli-container {
+  position: relative;
+  z-index: 1;
+}
+
+.regolamento {
+  height: 300px; 
+  width: 75%;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  z-index: 2;
+}
+
+.sfondo-moduli{
+  width: 100%;
+  height: 750px;
+}
+
+.container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.title-mod{
+    font-size: 50px;
+    color: #FFD93B;
+    text-transform: uppercase;
+    font-weight: bold; /* Rendi il testo in grassetto */
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.1px #8c53c0; /* Per Chrome e Safari */
+    text-shadow: 
+    -1px -1px 0 #8c53c0,  
+     1px -1px 0 #8c53c0,
+    -1px  1px 0 #8c53c0,
+     1px  1px 0 #8c53c0; /* Ombra del testo per simulare il contorno */
+}
+
+.container button {
+  background-color: #FFD93B; /* Giallo */
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Aumentato il padding per renderlo più evidente */
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block; /* Per centrare il pulsante */
+}
+
+.container button:hover {
+  background-color: #8340B2; /* Giallo più scuro */
+}
+
+.descrizione{
+  text-align: left;
+  margin-left: 150px;
+  margin-right: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.elenco-iscrizioni{
+  text-align: left;
+  margin-left: 150px;
+  margin-right: 100px;
+}
+
+.step{
+  font-size: 25px;
+}
+
+.post-step{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.iban{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; 
+}
+
+
+
+
+
+
+@media (max-width: 950px) {
+  .regolamento {
+    left: 20px; /* Riduci il margine sinistro */
+    top: 50px;
+    height: 200px;
+    width: 90%;
+  }
+
+  .title-mod{
+    font-size: 40px;
+    -webkit-text-stroke: 0.5px #8c53c0; /* Per Chrome e Safari */
+  }
+  
+  .sfondo-moduli {
+    height: 300px; /* Riduci l'altezza */
+  }
+
+  .descrizione{
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 20px;
+  }
+
+  .elenco-iscrizioni{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .container{
+    padding: 20px;
+  }
+
+  .iban{
+    font-size: 20px;
+  }
+
+  .post-step{
+    text-align: left;
+    font-size: 20px;
+  }
+
+}

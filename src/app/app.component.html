@@ -1,0 +1,45 @@
+<div class="contenitore">
+  <!-- Header -->
+  <div class="header">
+    <a routerLink="/home">
+      <img src="assets/images/logo.ico" alt="Logo Evergreen" class="logo">
+    </a>
+
+    <!-- Aggiungi l'icona per il burger menu -->
+    <div class="burger-menu" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="main-menu">
+      <!-- Chiama direttamente la funzione closeMenu() quando si clicca su un link -->
+      <li><a routerLink='/home' [class.active]="currentPage === 'home'" (click)="setCurrentPage('home'); closeMenu(); scrollToTop()">Home</a></li>
+      <li><a routerLink='/moduli' [class.active]="currentPage === 'moduli'" (click)="setCurrentPage('moduli'); closeMenu(); scrollToTop()">Moduli</a></li>
+      <!--<li><a routerLink='/about' [class.active]="currentPage === 'about'" (click)="setCurrentPage('about'); closeMenu(); scrollToTop()">La festa</a></li>-->
+      <li><a routerLink='/sponsor' [class.active]="currentPage === 'sponsor'" (click)="setCurrentPage('sponsor'); closeMenu(); scrollToTop()">Sponsor</a></li>
+    </ul>
+    
+  </div>
+
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="contatti">
+      <h4>Email: info&#64;evergreencup.it</h4>
+    </div>
+    <a href="https://www.facebook.com/profile.php?id=61558222912721" target="_blank">
+      <img src="assets/images/facebook.webp" alt="facebook" class="facebook">
+    </a>
+    <a href="https://www.instagram.com/evergreencup.egc/" target="_blank">
+      <img src="assets/images/instagram.webp" alt="instagram" class="instagram">
+    </a>
+    
+    <div class="policy">
+      <a routerLink='/cookie' >Cookie Policy</a>
+      <a routerLink='/privacy' >Privacy Policy</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,213 @@
+/* app.component.css */
+.header {
+  background-color: #8340b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .8);
+  transition: max-height .3s ease-out;
+}
+
+.logo {
+  width: 90px;
+  padding: 10px;
+  margin-left: 150px;
+}
+
+.header ul.main-menu {
+  list-style-type: none;
+  text-align: right;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.header ul.main-menu li {
+  display: inline;
+}
+
+.header ul.main-menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 25px;
+}
+
+.header ul.main-menu li a:hover {
+  background-color: #8c53c0;
+}
+
+.header.active ul.main-menu li {
+  margin-top: 50px;
+}
+
+.header ul.main-menu li a.active {
+  background-color: #8c53c0;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: transform .3s, opacity .3s;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.burger-menu.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger-menu:hover {
+  transform: scale(1.2);
+}
+
+.header.active .burger-menu {
+  opacity: 1;
+}
+
+.header.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.header.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.header.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.router {
+  padding-top: 110px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #8340b2;
+  color: #fff;
+  padding: 10px;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, .8);
+}
+
+.contatti {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin-left: 300px;
+  font-size: 20px;
+}
+
+.contatti h4 {
+  display: inline-block;
+  margin: 0;
+}
+
+.facebook, .instagram {
+  vertical-align: top;
+  padding: 10px;
+  width: 30px;
+}
+
+.policy {
+  padding-top: 15px;
+  float: right;
+  font-size: 20px;
+}
+
+.policy a {
+  margin-left: 30px;
+  color: #fff;
+}
+
+@media (max-width: 950px) {
+  .header ul.main-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header.active ul.main-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8340b2;
+    opacity: 1;
+    z-index: 5;
+    height: calc(100vh - 85px); /* Extend the background to the bottom */
+  }
+
+  .header ul.main-menu {
+    list-style-type: none;
+    text-align: center;
+    margin-left: 0;
+    padding-right: 0px;
+  }
+
+  .header.active ul.main-menu li {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .header.active ul.main-menu li:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+
+  .header.active ul.main-menu li:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+
+  .header.active ul.main-menu li:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+
+  .header.active ul.main-menu li.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .contatti {
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  .contatti h4 {
+    margin-bottom: 5px;
+  }
+
+  .policy {
+    float: none;
+    text-align: center;
+  }
+
+  .policy a {
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+    text-align: center;
+  }
+}

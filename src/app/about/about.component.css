@@ -1,0 +1,8 @@
+.festa {
+    font-size: 40px;
+    color: #FFD93B;
+    text-transform: uppercase;
+    font-weight: bold; /* Rendi il testo in grassetto */
+    letter-spacing: 4px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 6); /* Ombreggiatura */
+  }
