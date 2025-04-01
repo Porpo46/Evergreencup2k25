@@ -1,12 +1,8 @@
-.about-hero {
-  background-image: url('../../assets/images/sfondo_home.webp');
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-section {
+  text-align: center;
+  background: url('../../assets/images/sfondo_home.webp') center/cover no-repeat;
+  padding: 20px 20px 60px;
+  color: white;
 }
 
 .overlay {
