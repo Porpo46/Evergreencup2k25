@@ -1,127 +1,111 @@
-.moduli-container {
-  position: relative;
-  z-index: 1;
-}
-
-.regolamento {
-  height: 300px; 
-  width: 75%;
-  position: absolute;
-  top: 150px;
-  left: 50px;
-  z-index: 2;
-}
-
-.sfondo-moduli{
-  width: 100%;
-  height: 750px;
-}
-
-.container {
+.hero-section {
   text-align: center;
-  padding-bottom: 20px;
+  background: url('../../assets/images/sfondo_home.webp') center/cover no-repeat;
+  padding: 20px 20px 60px;
+  color: white;
+}
+.moduli-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
 }
 
-.title-mod{
-    font-size: 50px;
-    color: #FFD93B;
-    text-transform: uppercase;
-    font-weight: bold; /* Rendi il testo in grassetto */
-    letter-spacing: 2px;
-    -webkit-text-stroke: 0.1px #8c53c0; /* Per Chrome e Safari */
-    text-shadow: 
-    -1px -1px 0 #8c53c0,  
-     1px -1px 0 #8c53c0,
-    -1px  1px 0 #8c53c0,
-     1px  1px 0 #8c53c0; /* Ombra del testo per simulare il contorno */
+.sfondo-hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
 }
 
-.container button {
-  background-color: #FFD93B; /* Giallo */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFD93B;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px #000;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.moduli-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.moduli-section h2 {
+  font-size: 40px;
+  color: #8340B2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.descrizione {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 20px;
+}
+
+.moduli-section button {
+  background-color: #FFD93B;
   color: #fff;
   border: none;
-  padding: 15px 30px; /* Aumentato il padding per renderlo più evidente */
-  font-size: 16px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
   cursor: pointer;
-  display: inline-block; /* Per centrare il pulsante */
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.container button:hover {
-  background-color: #8340B2; /* Giallo più scuro */
+.moduli-section button:hover {
+  background-color: #8340B2;
+  transform: scale(1.05);
 }
 
-.descrizione{
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step-box {
+  background-color: #f3f3f3;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+}
+
+.step-box h3 {
+  color: #8340B2;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.step-box p {
+  font-size: 18px;
   text-align: left;
-  margin-left: 150px;
-  margin-right: 100px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
 }
 
-.elenco-iscrizioni{
-  text-align: left;
-  margin-left: 150px;
-  margin-right: 100px;
-}
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 30px;
+  }
 
-.step{
-  font-size: 25px;
-}
+  .moduli-section h2 {
+    font-size: 30px;
+  }
 
-.post-step{
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-}
-
-.iban{
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px; 
-}
-
-
-
-
-
-
-@media (max-width: 950px) {
-  .regolamento {
-    left: 20px; /* Riduci il margine sinistro */
-    top: 50px;
-    height: 200px;
+  .step-box {
     width: 90%;
   }
-
-  .title-mod{
-    font-size: 40px;
-    -webkit-text-stroke: 0.5px #8c53c0; /* Per Chrome e Safari */
-  }
-  
-  .sfondo-moduli {
-    height: 300px; /* Riduci l'altezza */
-  }
-
-  .descrizione{
-    margin-left: 0px;
-    margin-right: 0px;
-    font-size: 20px;
-  }
-
-  .elenco-iscrizioni{
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .container{
-    padding: 20px;
-  }
-
-  .iban{
-    font-size: 20px;
-  }
-
-  .post-step{
-    text-align: left;
-    font-size: 20px;
-  }
-
 }

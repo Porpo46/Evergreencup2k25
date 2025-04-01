@@ -1,31 +1,39 @@
-<div class="moduli-container">
-  <img src="assets/images/regolamento.webp" alt="Title Evergreen" class="regolamento">
-  <img _ngcontent-ng-c3276724310="" src="assets/images/sfondo_home.webp" alt="sfondo-moduli" class="sfondo-moduli" loading="lazy">
+<div class="hero-section">
+  <img src="assets/images/regolamento.webp" alt="EverGreenCup Regolamento" class="hero-title">
 </div>
 
-<div class="container">
-  <h3 class="title-mod">Regolamento di gioco</h3>
+<section class="moduli-section">
+  <h2>📜 Regolamento</h2>
+  <p class="descrizione">
+    Prima di iscriverti, leggi con attenzione il regolamento del torneo di Green Volley.
+  </p>
+  <button (click)="apriRegolamento()">Scarica il Regolamento</button>
+</section>
 
-  <p class="descrizione">Prima di procedere con l'iscrizione al torneo Evergreen, ti chiediamo gentilmente di dedicare qualche istante
-     alla lettura delle regole del torneo di green volley.</p> 
+<section class="moduli-section">
+  <h2>📝 Modalità d'iscrizione</h2>
 
-  <button (click)="apriRegolamento()">Qui per il regolamento</button>
+  <div class="steps">
+    <div class="step-box">
+      <h3>STEP 1</h3>
+      <p>Effettua il bonifico:<br>
+         <strong>IBAN:</strong> IT06R0832762820000000222066<br>
+         <strong>Intestatario:</strong> A.S.D. Team Volley 2007<br>
+         Causale: “TORNEO EGC - Nome squadra”</p>
+    </div>
 
-  <h3 class="title-mod">Modalità d'iscrizione</h3>
-  
-  <div class="elenco-iscrizioni">
-    <p class="step">STEP 1</p>
-    <p class="post-step">Effettua il bonifico utlizzando le coordinate bancarie che puoi trovare nel regolamento o riportate qui sotto indicando come causale “TORNEO EGC - Nome della squadra”.</p>
-    <p class="iban">IBAN: IT06R0832762820000000222066<br>Intestatario: A.S.D. Team Volley 2007 </p>
-    <p class="step">STEP 2</p>
-    <p class="post-step">Iscriviti utilizzando il pulsante qui sotto. Ti basterà solamente:<br> - Nome della squadra<br> - Taglie dei pantaloncini<br> - Dati del referente</p>
+    <div class="step-box">
+      <h3>STEP 2</h3>
+      <p>Compila il modulo con:<br>
+         • Nome squadra<br>
+         • Taglie pantaloncini<br>
+         • Dati referente</p>
+      <button onclick="window.open('https://forms.gle/hhxGF4LAeENMjF6PA', '_blank')">Iscriviti Subito</button>
+    </div>
+
+    <div class="step-box">
+      <h3>STEP 3</h3>
+      <p>Attendi l’email di conferma dal nostro staff con le istruzioni finali.</p>
+    </div>
   </div>
-  <button onclick="window.open('https://forms.gle/hhxGF4LAeENMjF6PA', '_blank')">Iscriviti subito</button>
-  <div class="elenco-iscrizioni">
-    <p class="step">STEP 3</p>
-    <p class="post-step">Attendi la conferma via email da parte del nostro staff per ricevere indicazioni sui passi successivi</p>
-  </div>
-
-<!-- <button (click)="apriIscrizioni()">Qui per i moduli di iscrizione</button> -->
-
-</div>
+</section>
