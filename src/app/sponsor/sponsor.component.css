@@ -1,60 +1,131 @@
 .sponsor {
   display: block;
-  margin: 0 auto;
-  max-width: 300px; /* Puoi regolare questa percentuale per rendere l'immagine più piccola */
+  margin: 20px auto;
+  max-width: 400px;
   height: auto;
-  padding: 30px;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creazione di colonne automatiche con larghezza minima di 300px */
-  gap: 20px; /* Spazio tra le card */
-  justify-content: center; /* Centra le card orizzontalmente */
+/* Messaggio di ringraziamento */
+.sponsor-message {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px 25px;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(90deg, #8340b2, #8c53c0, #FFD700);
+  background-size: 200% auto;
+  border-radius: 20px;
+  animation: gradientMove 5s ease infinite;
+  max-width: 90%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-.card {
-  margin-left: 20px;
-  margin-top: 20px;
-  max-width: 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+.sponsor-message .highlight {
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 0 0 3px #8c53c0;
 }
 
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+/* Marquee Scrolling */
+.sponsor-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  background: #fff;
+  border-top: 3px solid #8340b2;
+  border-bottom: 3px solid #8340b2;
 }
 
-.card-header {
-  padding: 16px;
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+  gap: 60px;
 }
 
-.card-title-group {
+.marquee-track a {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  transition: transform 0.3s ease;
 }
 
-.card-title-group img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 16px;
+.marquee-track img {
+  height: 100px;
+  max-width: 200px;
+  object-fit: contain;
+  filter: grayscale(0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Stili per dispositivi mobili */
+.marquee-track a:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0) drop-shadow(0 0 5px #8c53c0);
+}
+
+/* CTA finale */
+.sponsor-cta {
+  text-align: center;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sponsor-cta p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #8340b2;
+  font-weight: 600;
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #8340b2;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff176;
+  transform: scale(1.05);
+}
+
+/* Animazioni */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
 @media screen and (max-width: 600px) {
-  .sponsor{
-    max-width: 250px;
-  }
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .sponsor-message {
+    font-size: 18px;
+    padding: 15px;
   }
 
-  .card {
-    margin: 20px 0;
+  .marquee-track img {
+    height: 60px;
+    max-width: 120px;
+  }
+
+  .sponsor {
+    max-width: 200px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 15px;
   }
 }
