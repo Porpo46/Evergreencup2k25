@@ -1,0 +1,16 @@
+[[redirects]]
+  from = "https://evergreencup.it/*"
+  to = "https://www.evergreencup.it/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://evergreencup.it/*"
+  to = "https://www.evergreencup.it/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
