@@ -15,7 +15,7 @@
       <!-- Chiama direttamente la funzione closeMenu() quando si clicca su un link -->
       <li><a routerLink='/home' [class.active]="currentPage === 'home'" (click)="setCurrentPage('home'); closeMenu(); scrollToTop()">Home</a></li>
       <li><a routerLink='/moduli' [class.active]="currentPage === 'moduli'" (click)="setCurrentPage('moduli'); closeMenu(); scrollToTop()">Moduli</a></li>
-      <!--<li><a routerLink='/about' [class.active]="currentPage === 'about'" (click)="setCurrentPage('about'); closeMenu(); scrollToTop()">La festa</a></li>-->
+      <li><a routerLink='/about' [class.active]="currentPage === 'about'" (click)="setCurrentPage('about'); closeMenu(); scrollToTop()">Il torneo</a></li>
       <li><a routerLink='/sponsor' [class.active]="currentPage === 'sponsor'" (click)="setCurrentPage('sponsor'); closeMenu(); scrollToTop()">Sponsor</a></li>
     </ul>
     

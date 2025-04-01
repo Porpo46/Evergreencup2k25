@@ -1,27 +1,43 @@
-<div class="home-container">
-  <img src="assets/images/title.webp" alt="Title Evergreen" class="title">
-  <img src="assets/images/sfondo_home.webp" alt="Sfondo home" class="sfondo-home">
+<div class="hero-section">
+  <img src="assets/images/title.webp" alt="EverGreenCup Title" class="hero-title">
 </div>
 
-<div class="main-content">
-  <div class="countdown-box">
-    <div class="tempo">Mancano ancora ...</div>
-    <div class="countdown">
-      <div class="countdown-item">
-        <h5>Giorni</h5>
-        <span class="countdown-block">{{ remainingTime.split(':')[0] }}</span>
+<section class="countdown-video">
+  <div class="countdown-stats">
+    <div class="countdown-box">
+      <div class="tempo">EverGreenCup inizia tra</div>
+      <div class="countdown">
+        <div class="countdown-item">
+          <h5>Giorni</h5>
+          <span class="countdown-block">{{ remainingTime.split(':')[0] }}</span>
+        </div>
+        <div class="countdown-item">
+          <h5>Ore</h5>
+          <span class="countdown-block">{{ remainingTime.split(':')[1] }}</span>
+        </div>
+        <div class="countdown-item">
+          <h5>Minuti</h5>
+          <span class="countdown-block">{{ remainingTime.split(':')[2] }}</span>
+        </div>
+        <div class="countdown-item">
+          <h5>Secondi</h5>
+          <span class="countdown-block">{{ remainingTime.split(':')[3] }}</span>
+        </div>
       </div>
-      <div class="countdown-item">
-        <h5>Ore</h5>
-        <span class="countdown-block">{{ remainingTime.split(':')[1] }}</span>
+    </div>
+
+    <div class="stats-box">
+      <div class="stat">
+        <span class="stat-number" id="teamsCount">0</span>
+        <p>Squadre</p>
       </div>
-      <div class="countdown-item">
-        <h5>Minuti</h5>
-        <span class="countdown-block">{{ remainingTime.split(':')[2] }}</span>
+      <div class="stat">
+        <span class="stat-number" id="athletesCount">0</span>
+        <p>Atleti</p>
       </div>
-      <div class="countdown-item">
-        <h5>Secondi</h5>
-        <span class="countdown-block">{{ remainingTime.split(':')[3] }}</span>
+      <div class="stat">
+        <span class="stat-number" id="matchesCount">0</span>
+        <p>Partite giocate</p>
       </div>
     </div>
   </div>
@@ -34,28 +50,41 @@
       </video>
     </div>
   </div>
+</section>
 
-<div class="edizione">
-  <h4>
-    Cari nuovi amici di <span class="highlight">EverGreenCup</span>, siamo pronti a scaldare i motori per la nostra prima edizione!<br>
-    Se amate lo <strong>sport</strong>, il <strong>divertimento</strong> e volete vivere un pizzico di <strong>competizione</strong>, questo è l'evento che fa per voi!<br>
-    Preparatevi a scendere in campo per un <span class="highlight">weekend adrenalinico</span> giocato fino all'ultimo pallone.
-  </h4>
-</div>
-
-<div class="locinfo">
-  <div class="location-conteiner">
-    <h3 class="location">LOCATION</h3>
-    <iframe title="Mappa della Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1394.779232866106!2d11.830944915067406!3d45.63960556909604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778d5d2081d96c7%3A0xec0239f404516a27!2sEverGreenCup!5e0!3m2!1sit!2sit!4v1716840559927!5m2!1sit!2sit"
-      width="300" height="200" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class="indirizzo">
-      <h5>Impianto Sportivo di Tombolo<br>Via Sant'Andrea 6<br>Tombolo (PD), 35019</h5>
+<div class="edizione-content">
+  <div class="edizione-text">
+    <h3>Benvenuti alla seconda edizione della <span class="highlight">EverGreenCup</span>!</h3>
+    <p>
+      Unisciti a noi per un evento carico di <strong>sport</strong>, <strong>energia</strong> e una sana dose di <strong>competizione</strong>.
+      Vivi un'esperienza memorabile in compagnia!
+    </p>
+    <div class="cta-section inline">
+      <div class="cta-inline-wrapper">
+        <h2 class="cta-heading">Hai già la tua squadra? <span class="arrow">➜</span></h2>
+        <a href="/moduli" class="cta-button large">Iscriviti</a>
+      </div>
     </div>
+    
+    
   </div>
 
-  <div class="info-conteiner">
-    <div class="luogo">
-      <img src="assets/images/luogo.webp" alt="Luogo" class="sfondo-home">
-    </div>
+  <div class="edizione-image">
+    <img src="assets/images/fase_gioco.jpg" alt="Azione di gioco EverGreenCup">
   </div>
 </div>
+
+
+
+<section class="location-info">
+  <div class="location-card">
+    <h3>📍 Location</h3>
+    <iframe title="Mappa della Location" src="https://www.google.com/maps/embed?..." width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    <address>Impianto Sportivo di Tombolo<br>Via Sant'Andrea 6, Tombolo (PD), 35019</address>
+  </div>
+  <div class="location-image">
+    <img src="assets/images/luogo.webp" alt="Foto Location">
+  </div>
+</section>
+
+
