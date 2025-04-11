@@ -1,23 +1,122 @@
-body {
-  font-family: 'Outfit', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
+/* HERO SECTION CLEAN */
 .hero-section {
-  text-align: center;
-  background: url('../../assets/images/sfondo_home.webp') center/cover no-repeat;
-  padding: 20px 20px 60px;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 0 40px;
+  background: linear-gradient(135deg, #0a0017 0%, #21003c 100%);
+  color: #FFD700;
+  overflow: hidden;
 }
 
-.hero-title {
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto 20px;
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  gap: 40px;
 }
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-title {
+  font-size: 80px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #6A0DAD;
+  animation: fadeInDown 1.2s ease forwards;
+  margin: 0;
+}
+
+.hero-connector {
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  border-radius: 2px;
+  margin: 20px 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  animation: fadeInUp 1.5s ease forwards;
+  margin: 0;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 2s ease forwards;
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Animazioni */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-text, .hero-image {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 50px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+}
+
+
 
 /* Countdown + Video Layout */
 .countdown-video {
