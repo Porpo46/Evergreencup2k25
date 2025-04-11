@@ -5,6 +5,8 @@ import { ModuliComponent } from './moduli/moduli.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { CookieComponent } from './cookie/cookie.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { ShopComponent } from './shop/shop.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to 'home'
@@ -13,5 +15,8 @@ export const routes: Routes = [
     { path: 'moduli', component: ModuliComponent },
     { path: 'sponsor', component: SponsorComponent },
     { path: 'cookie', component: CookieComponent },
-    { path: 'privacy', component: PrivacyComponent }
+    { path: 'privacy', component: PrivacyComponent },
+    { path: 'shop', component: ShopComponent },
+    { path: 'checkout', component: CheckoutComponent },
+    { path: '', redirectTo: 'shop', pathMatch: 'full' }
 ];

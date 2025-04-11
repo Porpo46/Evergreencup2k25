@@ -1,0 +1,36 @@
+<div class="checkout-container">
+  <a routerLink="/shop" class="back-button">← Torna allo Shop</a>
+
+  <h1 class="checkout-title">Checkout</h1>
+
+  <form class="checkout-form">
+    <input type="text" placeholder="Nome completo" [(ngModel)]="name" name="name" required>
+    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+    <input type="text" placeholder="Indirizzo di spedizione" [(ngModel)]="address" name="address" required>
+  </form>
+
+  <div class="order-summary">
+    <h2>Riepilogo Ordine</h2>
+
+    <div *ngIf="cartCount > 0; else carrelloVuoto">
+      <div *ngFor="let taglia of taglieUniche()">
+        <p>
+          <strong>{{ groupedTaglie[taglia] }}x</strong> {{ taglia }}
+          <button class="remove-button" (click)="removeItem(taglia)">🗑️</button>
+        </p>
+      </div>
+
+      <div class="cost-summary">
+        <p><strong>Totale pantaloncini:</strong> {{ totalPantaloncini | currency:'EUR' }}</p>
+        <p><strong>Spedizione:</strong> {{ shippingCost | currency:'EUR' }}</p>
+        <p><strong>TOTALE:</strong> {{ totalOrdine | currency:'EUR' }}</p>
+      </div>
+    </div>
+
+    <ng-template #carrelloVuoto>
+      <p class="empty-cart">🛒 Il tuo carrello è vuoto!</p>
+    </ng-template>
+  </div>
+
+  <div id="paypal-button-container" class="paypal-button-wrapper"></div>
+</div>

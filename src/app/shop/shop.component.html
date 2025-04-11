@@ -1,0 +1,31 @@
+<div #cartSection class="cart-fixed">
+  <div class="cart-badge">
+    🛒 <span id="cart-count">{{ cartCount }}</span>
+    <a routerLink="/checkout" class="checkout-link">
+      <button>Checkout</button>
+    </a>
+  </div>
+</div>
+
+<div class="shop-container">
+  <h1 class="page-title">Shop - Pantaloncini</h1>
+
+  <div class="product">
+    <img [src]="short.image" alt="{{ short.name }}">
+    <h2>{{ short.name }}</h2>
+    <p>
+      <del>{{ short.originalPrice | currency:'EUR' }}</del>
+      <strong>{{ short.discountedPrice | currency:'EUR' }}</strong>
+    </p>
+
+    <div class="sizes">
+      <label *ngFor="let size of short.sizes"
+             [class.selected]="selectedSize === size"
+             (click)="selectSize(size)">
+        {{ size }}
+      </label>
+    </div>
+
+    <button (click)="addToCart()">Aggiungi al carrello</button>
+  </div>
+</div>

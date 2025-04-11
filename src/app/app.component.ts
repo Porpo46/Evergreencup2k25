@@ -64,8 +64,11 @@ export class AppComponent {
       this.currentPage = 'moduli';
     } else if (url.includes('/about')) {
       this.currentPage = 'about';
+    } else if (url.includes('/shop') || url.includes('/checkout')) {  /* 👈 AGGIUNGIAMO QUI */
+      this.currentPage = 'shop';
     } else if (url.includes('/sponsor')) {
       this.currentPage = 'sponsor';
     }
   }
+  
 }
