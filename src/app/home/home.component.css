@@ -404,29 +404,148 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .countdown-video,
-  .location-info,
-  .stats-box,
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 20px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .hero-connector {
+    width: 60px;
+    margin: 10px auto;
+  }
+
+  .sub-title {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  /* COUNTDOWN + VIDEO */
+  .countdown-video {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .countdown-stats,
+  .video-promo {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .tempo {
+    font-size: 40px;
+  }
+
+  .countdown {
+    gap: 15px;
+  }
+
+  .countdown-block {
+    font-size: 32px;
+    padding: 15px 20px;
+  }
+
+  .stats-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .stat p {
+    font-size: 16px;
+  }
+
+  .phone-frame {
+    width: 200px;
+    height: 360px;
+  }
+
+  /* EDIZIONE */
+  .edizione {
+    padding: 30px 20px;
+  }
+
   .edizione-content {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 
-  .countdown-box {
-    max-width: 100%;
+  .edizione-text h3 {
+    font-size: 22px;
   }
 
-  .video-promo {
-    margin-left: 0;
-    max-width: 100%;
-    margin-top: 40px;
+  .edizione-text p {
+    font-size: 16px;
   }
 
-  .stat {
+  .edizione-image img {
     width: 100%;
   }
 
-  .edizione-image {
-    margin-top: 30px;
+  /* LOCATION */
+  .location-info {
+    padding: 30px 15px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .location-card,
+  .location-image {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .location-card h3 {
+    font-size: 20px;
+  }
+
+  .location-card address {
+    font-size: 14px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 30px 15px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .cta-button.large {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+
+  .cta-inline-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-heading {
+    font-size: 22px;
   }
 }

@@ -161,31 +161,79 @@
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE OTTIMIZZATO PER HERO REGOLAMENTO E MODULI */
+
 @media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 20px;
+    height: auto;
+    min-height: 60vh;
+  }
+
   .hero-content {
     flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-text {
+    align-items: center;
     text-align: center;
-    gap: 20px;
   }
 
   .main-title {
-    font-size: 50px;
+    font-size: 38px;
+  }
+
+  .hero-connector {
+    width: 50px;
+    margin: 10px auto;
   }
 
   .sub-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .hero-image img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
-  .steps {
-    flex-direction: column;
-    align-items: center;
+  /* MODULI SECTION */
+  .moduli-section {
+    padding: 30px 15px;
   }
 
+  .moduli-section h2 {
+    font-size: 26px;
+  }
+
+  .descrizione {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .moduli-section button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* STEP BOX */
   .step-box {
-    width: 90%;
+    width: 90%; /* larghezza massima ridotta per evitare overflow */
+    box-sizing: border-box; /* assicura che padding e bordi siano inclusi nella larghezza totale */
+    padding: 15px;
+    margin: 0 auto; /* centra i box */
+    overflow-wrap: break-word; /* gestione testo lungo per evitare overflow */
+  }
+
+  .step-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .step-box p {
+    font-size: 14px;
+    padding: 0 5px;
   }
 }

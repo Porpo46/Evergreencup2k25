@@ -1,53 +1,99 @@
+/* HERO SECTION GREEN VOLLEY */
 .hero-section {
-  text-align: center;
-  background: url('../../assets/images/sfondo_home.webp') center/cover no-repeat;
-  padding: 20px 20px 60px;
-  color: white;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-  border-radius: 20px;
-}
-
-.hero-title {
-  font-size: 60px;
-  margin: 0;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 0 40px;
+  background: linear-gradient(135deg, #0a0017 0%, #21003c 100%);
   color: #FFD700;
-  text-shadow: 0 0 10px #000;
+  overflow: hidden;
 }
 
-.hero-subtitle {
-  font-size: 24px;
-  margin-top: 10px;
-  color: #fff;
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  gap: 40px;
 }
 
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-title {
+  font-size: 70px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #6A0DAD;
+  animation: fadeInDown 1.2s ease forwards;
+  margin: 0;
+}
+
+.hero-connector {
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  border-radius: 2px;
+  margin: 20px 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.sub-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.5s ease forwards;
+  margin: 0;
+  color: #FFD700;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 2s ease forwards;
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* ABOUT SECTIONS */
 .about-section {
   padding: 60px 30px;
   max-width: 1000px;
   margin: auto;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
-.modern-section h2,
-.image-text-section h2,
-.call-to-action h2 {
+.about-section h2 {
   font-size: 36px;
   color: #8340b2;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.modern-section p,
-.image-text-section p {
+.about-section p {
   font-size: 18px;
   line-height: 1.8;
-  text-align: center;
+  color: #333;
 }
 
 .image-text-section {
@@ -61,6 +107,7 @@
 .image-text-section .text {
   flex: 1;
   min-width: 300px;
+  text-align: left;
 }
 
 .image-text-section .image {
@@ -71,60 +118,106 @@
 .image-text-section img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dark {
   background-color: #f8f4ff;
+  padding-bottom: 100px; /* Spazio extra sotto */
+  border-bottom-left-radius: 40px; /* Bordi stondati */
+  border-bottom-right-radius: 40px;
+  margin-bottom: 60px; /* Spazio extra fuori dal blocco */
 }
+
 
 .dark ul {
   list-style: none;
   padding: 0;
-  text-align: center;
   font-size: 20px;
+  color: #333;
 }
 
 .dark ul li {
   margin: 10px 0;
-  color: #333;
 }
 
-.call-to-action {
-  text-align: center;
-  background-color: #8340b2;
-  color: #fff;
-  border-radius: 15px;
-  padding: 60px 30px;
-}
 
-.call-to-action .cta-button {
-  background-color: #FFD700;
-  color: #333;
-  padding: 15px 30px;
-  font-size: 20px;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 20px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
 
-.call-to-action .cta-button:hover {
-  background-color: #e6c200;
-}
+/* RESPONSIVE OTTIMIZZATO GENERALE */
 
 @media (max-width: 768px) {
-  .hero-title {
+
+  /* HERO SECTION GREEN VOLLEY */
+  .hero-section {
+    padding: 20px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
     font-size: 40px;
   }
 
-  .hero-subtitle {
-    font-size: 18px;
+  .hero-connector {
+    width: 60px;
+    margin: 10px auto;
+  }
+
+  .sub-title {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 30px 20px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-section p {
+    font-size: 16px;
   }
 
   .image-text-section {
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .image-text-section .text,
+  .image-text-section .image {
+    min-width: 100%;
+  }
+
+  .image-text-section .text {
+    text-align: center;
+  }
+
+  .dark {
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .dark ul {
+    font-size: 16px;
   }
 }
