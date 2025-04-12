@@ -8,7 +8,7 @@
   background: linear-gradient(135deg, #0a0017 0%, #21003c 100%);
   color: #FFD700;
   overflow: hidden;
-}
+} 
 
 .hero-content {
   display: flex;
@@ -73,6 +73,22 @@
 
 .hero-image img:hover {
   transform: scale(1.05) rotate(1deg);
+}
+
+/* Animazioni */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* ABOUT SECTIONS */

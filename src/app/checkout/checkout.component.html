@@ -4,26 +4,31 @@
   <h1 class="checkout-title">Checkout</h1>
 
   <form class="checkout-form">
-    <input type="text" placeholder="Nome completo" [(ngModel)]="name" name="name" required>
+    <input type="text" placeholder="Nome" [(ngModel)]="name" name="name" required>
+    <input type="text" placeholder="Cognome" [(ngModel)]="surname" name="surname" required>
+    <input type="text" placeholder="Codice fiscale" [(ngModel)]="codiceFiscale" name="codiceFiscale" required>
     <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
     <input type="text" placeholder="Indirizzo di spedizione" [(ngModel)]="address" name="address" required>
+    <input type="text" placeholder="Comune" [(ngModel)]="comune" name="comune" required>
+    <input type="text" placeholder="Provincia" [(ngModel)]="provincia" name="provincia" required>
   </form>
 
   <div class="order-summary">
     <h2>Riepilogo Ordine</h2>
 
     <div *ngIf="cartCount > 0; else carrelloVuoto">
-      <div *ngFor="let taglia of taglieUniche()">
-        <p>
-          <strong>{{ groupedTaglie[taglia] }}x</strong> {{ taglia }}
-          <button class="remove-button" (click)="removeItem(taglia)">🗑️</button>
-        </p>
+      <div class="cart-item" *ngFor="let taglia of taglieUniche(); let i = index" [@fadeOut]>
+        <div class="item-info">
+          <span class="item-quantity">{{ groupedTaglie[taglia] }}x</span>
+          <span class="item-size">{{ taglia }}</span>
+        </div>
+        <button class="remove-button" (click)="removeItem(taglia)">🗑️</button>
       </div>
 
       <div class="cost-summary">
-        <p><strong>Totale pantaloncini:</strong> {{ totalPantaloncini | currency:'EUR' }}</p>
-        <p><strong>Spedizione:</strong> {{ shippingCost | currency:'EUR' }}</p>
-        <p><strong>TOTALE:</strong> {{ totalOrdine | currency:'EUR' }}</p>
+        <p><span>Numero di pantaloncini:</span> <strong>{{ cartCount }}</strong></p>
+        <p><span>Prezzo unitario:</span> <strong>{{ prezzoPantaloncino | currency:'EUR' }}</strong></p>
+        <p class="total"><span>TOTALE:</span> {{ totalPantaloncini | currency:'EUR' }}</p>
       </div>
     </div>
 
@@ -32,5 +37,9 @@
     </ng-template>
   </div>
 
-  <div id="paypal-button-container" class="paypal-button-wrapper"></div>
+  <button class="confirm-button" (click)="completaOrdine()">Completa Ordine</button>
+
+  <div *ngIf="successMessage" class="success-message" [@fadeIn]>
+    {{ successMessage }}
+  </div>
 </div>
