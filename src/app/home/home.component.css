@@ -1,4 +1,4 @@
-/* HERO SECTION CLEAN */
+/* --- HERO SECTION --- */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -74,7 +74,6 @@
   transform: scale(1.05) rotate(1deg);
 }
 
-/* Animazioni */
 @keyframes fadeInDown {
   0% { opacity: 0; transform: translateY(-40px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -90,35 +89,8 @@
   100% { opacity: 1; }
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
 
-  .hero-text, .hero-image {
-    align-items: center;
-    text-align: center;
-  }
-
-  .main-title {
-    font-size: 50px;
-  }
-
-  .sub-title {
-    font-size: 20px;
-  }
-
-  .hero-image img {
-    max-width: 80%;
-  }
-}
-
-
-
-/* Countdown + Video Layout */
+/* --- COUNTDOWN & STATS --- */
 .countdown-video {
   display: flex;
   flex-wrap: wrap;
@@ -132,8 +104,9 @@
 .countdown-stats {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   max-width: 600px;
+  text-align: center;
   flex: 1;
 }
 
@@ -146,7 +119,7 @@
 }
 
 .tempo {
-  font-size: 60px;
+  font-size: 40px;
   color: #8340B2;
   font-weight: bold;
   text-transform: uppercase;
@@ -174,6 +147,7 @@
   padding: 20px 30px;
   background-color: #8340B2;
   color: #FFD93B;
+  border: 3px solid #000; /* <<< Aggiunto bordo nero */
   border-radius: 16px;
   font-weight: bold;
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
@@ -189,27 +163,37 @@
 .stat {
   flex: 1;
   min-width: 120px;
-  background: #f8f8f8;
-  padding: 10px 5px;
+  background: #8340B2; /* Sfondo viola */
+  padding: 10px;
+  border: 3px solid #000; /* <<< Aggiunto bordo nero */
   border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .stat-number {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
-  color: #FFD700;
+  color: #FFD93B; /* Testo giallo */
 }
 
 .stat p {
   margin-top: 10px;
-  color: #8340B2;
+  color: #FFD93B;
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
 }
 
+
+
+/* --- VIDEO PROMO --- */
 .video-promo {
   flex: 1;
   max-width: 350px;
@@ -249,6 +233,12 @@
   border-radius: 20px;
   object-fit: cover;
 }
+
+
+/* --- RESTO DEL SITO (edizione, location, CTA) --- */
+
+/* Puoi incollare qui anche la parte finale se serve */
+
 
 /* Edizione */
 .edizione {
@@ -467,14 +457,25 @@
   .stats-box {
     flex-direction: column;
     gap: 20px;
+    align-items: center; /* Centra i box */
+  }
+
+  .stat {
+    width: 80%; /* Rende i box più larghi e armoniosi */
+    padding: 20px;
   }
 
   .stat-number {
-    font-size: 32px;
+    font-size: 36px; /* Riduce leggermente il numero */
   }
 
   .stat p {
-    font-size: 16px;
+    font-size: 16px; /* Riduce il testo sotto */
+  }
+
+  .tempo {
+    font-size: 24px; /* Sistema il titolo sopra */
+    text-align: center;
   }
 
   .phone-frame {
@@ -490,6 +491,10 @@
   .edizione-content {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .edizione-text{
+    margin-left: 15px;
   }
 
   .edizione-text h3 {
