@@ -12,12 +12,13 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 3; /* più basso della header */
   text-align: center;
-  pointer-events: none;
+  pointer-events: none; /* blocca click solo su cart-fixed */
 }
 
 .cart-badge {
+  pointer-events: auto; /* 🔥 riabilita i click dentro */
   background-color: #FFD700;
   color: #21003c;
   padding: 10px 15px;
@@ -29,6 +30,7 @@
   gap: 10px;
   margin-top: 120px;
 }
+
 
 .cart-badge button {
   background-color: #8340B2;
