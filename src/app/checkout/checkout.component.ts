@@ -28,11 +28,12 @@ import emailjs from 'emailjs-com';
 export class CheckoutComponent {
   name = '';
   surname = '';
-  codiceFiscale = '';
   email = '';
   address = '';
   comune = '';
   provincia = '';
+  civico = '';
+  cap = '';
   taglie: string[] = [];
   groupedTaglie: { [key: string]: number } = {};
   cartCount = 0;
@@ -59,11 +60,7 @@ export class CheckoutComponent {
   groupSizes() {
     this.groupedTaglie = {};
     this.taglie.forEach(size => {
-      if (this.groupedTaglie[size]) {
-        this.groupedTaglie[size]++;
-      } else {
-        this.groupedTaglie[size] = 1;
-      }
+      this.groupedTaglie[size] = (this.groupedTaglie[size] || 0) + 1;
     });
   }
 
@@ -84,19 +81,9 @@ export class CheckoutComponent {
     }
   }
 
-  validaCodiceFiscale(cf: string): boolean {
-    const regex = /^[A-Z0-9]{16}$/i;
-    return regex.test(cf);
-  }
-
   completaOrdine() {
-    if (!this.name || !this.surname || !this.codiceFiscale || !this.email || !this.address || !this.comune || !this.provincia) {
+    if (!this.name || !this.surname || !this.email || !this.address || !this.comune || !this.provincia || !this.civico || !this.cap) {
       alert('Per favore compila tutti i campi.');
-      return;
-    }
-
-    if (!this.validaCodiceFiscale(this.codiceFiscale)) {
-      alert('Codice Fiscale non valido. Deve essere di 16 caratteri alfanumerici.');
       return;
     }
 
@@ -106,21 +93,20 @@ export class CheckoutComponent {
     }
 
     const templateParams = {
-      from_name: this.name + ' ' + this.surname,
+      from_name: `${this.name} ${this.surname}`,
       from_email: this.email,
-      address: this.address,
-      comune: this.comune,
+      address: `${this.address}, ${this.civico}`,
+      comune: `${this.comune}, ${this.cap}`,
       provincia: this.provincia,
-      codice_fiscale: this.codiceFiscale,
       taglia: this.taglie.join(', '),
       amount: this.totalPantaloncini.toFixed(2)
     };
 
     emailjs.send(
-      'service_dwtzfnn',
-      'template_4kiu6dm',
+      'service_m0aqf24',
+      'template_iyl5ikk',
       templateParams,
-      'ZXJXyJjWsghXvrrBI'
+      'kpqwgS0evOptWc23D'
     ).then((response) => {
       console.log('Email inviata!', response.status, response.text);
       this.successMessage = '✅ Ordine inviato! Lo staff Evergreen ti contatterà a breve per effettuare il pagamento.';

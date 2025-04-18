@@ -6,12 +6,15 @@
   <form class="checkout-form">
     <input type="text" placeholder="Nome" [(ngModel)]="name" name="name" required>
     <input type="text" placeholder="Cognome" [(ngModel)]="surname" name="surname" required>
-    <input type="text" placeholder="Codice fiscale" [(ngModel)]="codiceFiscale" name="codiceFiscale" required>
     <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
-    <input type="text" placeholder="Indirizzo di spedizione" [(ngModel)]="address" name="address" required>
-    <input type="text" placeholder="Comune" [(ngModel)]="comune" name="comune" required>
     <input type="text" placeholder="Provincia" [(ngModel)]="provincia" name="provincia" required>
+    <input type="text" placeholder="Comune" [(ngModel)]="comune" name="comune" required>
+    
+    <input type="text" placeholder="Indirizzo" [(ngModel)]="address" name="address" required>
+    <input type="text" placeholder="Civico" [(ngModel)]="civico" name="civico" required>
+    <input type="text" placeholder="CAP" [(ngModel)]="cap" name="cap" required>
   </form>
+  
 
   <div class="order-summary">
     <h2>Riepilogo Ordine</h2>

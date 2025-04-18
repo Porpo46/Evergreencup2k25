@@ -23,7 +23,7 @@ export class ShopComponent implements OnInit {
     originalPrice: 20.00,
     discountedPrice: 15.00,
     image: 'assets/images/shorts.jpg',
-    sizes: ['S', 'M', 'L', 'XL']
+    sizes: ['S', 'M', 'L', 'XL', 'XXL']
   };
 
   ngOnInit(): void {
