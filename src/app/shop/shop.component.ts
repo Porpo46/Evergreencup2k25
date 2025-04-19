@@ -22,7 +22,7 @@ export class ShopComponent implements OnInit {
     name: 'Pantaloncini Evergreen',
     originalPrice: 20.00,
     discountedPrice: 15.00,
-    image: 'assets/images/shorts.jpg',
+    image: 'assets/images/shorts.webp',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   };
 
