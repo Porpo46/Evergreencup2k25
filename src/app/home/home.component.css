@@ -391,6 +391,158 @@
 }
 
 
+/* RESPONSIVE PER TABLET (iPad e simili) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 30px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 60px;
+  }
+
+  .hero-connector {
+    width: 70px;
+    margin: 15px auto;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+
+  /* COUNTDOWN + VIDEO */
+  .countdown-video {
+    padding: 40px 40px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown-stats,
+  .video-promo {
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .tempo {
+    font-size: 36px;
+  }
+
+  .countdown {
+    gap: 20px;
+  }
+
+  .countdown-block {
+    font-size: 40px;
+    padding: 18px 24px;
+  }
+
+  .stats-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stat {
+    flex: 1 1 45%;
+    max-width: 220px;
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+
+  .stat p {
+    font-size: 18px;
+  }
+
+  .phone-frame {
+    width: 220px;
+    height: 400px;
+  }
+
+  /* EDIZIONE */
+  .edizione {
+    padding: 40px 30px;
+  }
+
+  .edizione-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .edizione-text h3 {
+    font-size: 26px;
+  }
+
+  .edizione-text p {
+    font-size: 17px;
+  }
+
+  /* LOCATION */
+  .location-info {
+    padding: 40px 20px;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .location-card,
+  .location-image {
+    max-width: 100%;
+  }
+
+  .location-card h3 {
+    font-size: 22px;
+  }
+
+  .location-card address {
+    font-size: 16px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 40px 20px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .cta-button.large {
+    font-size: 22px;
+    padding: 16px 32px;
+  }
+
+  .cta-inline-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-heading {
+    font-size: 26px;
+  }
+}
 
 
 /* Responsive */

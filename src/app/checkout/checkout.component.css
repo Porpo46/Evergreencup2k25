@@ -177,6 +177,82 @@
   animation: fadeIn 0.5s ease-in;
 }
 
+/* RESPONSIVE PER TABLET (iPad e simili) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .checkout-container {
+    padding: 80px 40px;
+  }
+
+  .checkout-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .checkout-form {
+    max-width: 500px;
+    gap: 25px;
+  }
+
+  .checkout-form input {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .order-summary {
+    max-width: 500px;
+  }
+
+  .order-summary h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .cart-item {
+    padding: 14px 20px;
+    margin-bottom: 12px;
+  }
+
+  .item-info, .item-quantity, .item-size {
+    font-size: 20px;
+  }
+
+  .remove-button {
+    font-size: 22px;
+  }
+
+  .cost-summary {
+    padding: 30px 24px;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .cost-summary p {
+    font-size: 20px;
+  }
+
+  .cost-summary p.total {
+    font-size: 24px;
+  }
+
+  .empty-cart {
+    font-size: 22px;
+  }
+
+  .confirm-button {
+    margin-top: 40px;
+    padding: 16px 28px;
+    font-size: 22px;
+  }
+
+  .success-message {
+    font-size: 20px;
+    padding: 18px 24px;
+    margin-top: 30px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .checkout-title {
     font-size: 32px;

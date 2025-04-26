@@ -160,7 +160,93 @@
   100% { opacity: 1; }
 }
 
-/* RESPONSIVE */
+
+/* RESPONSIVE PER TABLET (iPad e simili) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 30px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 55px;
+  }
+
+  .hero-connector {
+    width: 70px;
+    margin: 15px auto;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+
+  /* MODULI SECTION */
+  .moduli-section {
+    padding: 40px 20px;
+  }
+
+  .moduli-section h2 {
+    font-size: 32px;
+  }
+
+  .descrizione {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .moduli-section button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+/* RESPONSIVE TABLET PER REGOLAMENTO */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* spazio tra i box */
+    margin-top: 40px;
+  }
+
+  .step-box {
+    flex: 1 1 250px; /* 🔥 Occupa minimo 250px ma si adatta */
+    max-width: 300px; /* 🔥 Limite massimo per evitare che diventino troppo grandi */
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  .step-box h3 {
+    font-size: 24px;
+  }
+
+  .step-box p {
+    font-size: 16px;
+  }
+}
+
+}
+
+
 /* RESPONSIVE OTTIMIZZATO PER HERO REGOLAMENTO E MODULI */
 
 @media (max-width: 768px) {

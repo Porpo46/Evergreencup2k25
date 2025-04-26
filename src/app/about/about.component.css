@@ -160,6 +160,85 @@
 
 
 /* RESPONSIVE OTTIMIZZATO GENERALE */
+/* RESPONSIVE PER TABLET (iPad e simili) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* HERO SECTION GREEN VOLLEY */
+  .hero-section {
+    padding: 30px;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 55px;
+  }
+
+  .hero-connector {
+    width: 70px;
+    margin: 15px auto;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 40px 30px;
+  }
+
+  .about-section h2 {
+    font-size: 30px;
+  }
+
+  .about-section p {
+    font-size: 17px;
+  }
+
+  .image-text-section {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .image-text-section .text,
+  .image-text-section .image {
+    min-width: 80%;
+  }
+
+  .image-text-section .text {
+    text-align: center;
+  }
+
+  .dark {
+    padding-bottom: 70px;
+    margin-bottom: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .dark ul {
+    font-size: 18px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
 
