@@ -6,13 +6,13 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  targetDate: Date = new Date('2025-07-05T08:00:00');
+  targetDate: Date = new Date('2026-07-05T08:00:00');
   remainingTime: string;
 
   stats = {
-    teams: 44,
-    athletes: 180,
-    matches: 110
+    teams: 64,
+    athletes: 273,
+    matches: 283
   };
 
   private animated = false;
